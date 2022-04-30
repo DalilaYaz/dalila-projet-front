@@ -2,7 +2,7 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 export const environment = {
   production: false,
-  apiBaseUrl: "http://localhost:3000/",
+  apiBaseUrl: "http://localhost:3000",
 };
 /*
  * For easier debugging in development mode, you can import the following file

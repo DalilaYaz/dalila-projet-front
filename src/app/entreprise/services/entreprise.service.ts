@@ -12,34 +12,33 @@ export class EntrepriseService {
 
   getEntreprises(): Observable<Entreprise[]> {
     return this._http.get<Entreprise[]>(
-      ${environment.apiBaseUrl}${this.entreprisePath}
+      `${environment.apiBaseUrl}${this.entreprisePath}`
     );
   }
 
   getEntreprise(id: number): Observable<Entreprise> {
     return this._http.get<Entreprise>(
-      ${environment.apiBaseUrl}${this.entreprisePath}/${id}
+      `${environment.apiBaseUrl}${this.entreprisePath}/${id}`
     );
   }
 
   createEntreprise(entreprise: Entreprise): Observable<string> {
     return this._http.post<string>(
-      ${environment.apiBaseUrl}${this.entreprisePath},
+      `${environment.apiBaseUrl}${this.entreprisePath}`,
       entreprise
     );
   }
 
   updateEntreprise(entreprise: Entreprise): Observable<string> {
     return this._http.put<string>(
-      ${environment.apiBaseUrl}${this.entreprisePath}/${entreprise.id},
+      `${environment.apiBaseUrl}${this.entreprisePath}/${entreprise.id}`,
       entreprise
     );
   }
 
   deleteEntreprise(id: number): Observable<string> {
     return this._http.delete<string>(
-      ${environment.apiBaseUrl}${this.entreprisePath}/${id}
+      `${environment.apiBaseUrl}${this.entreprisePath}/${id}`
     );
   }
 }
-

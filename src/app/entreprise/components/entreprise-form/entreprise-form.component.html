@@ -1,1 +1,39 @@
-<p>entreprise-form works!</p>
+<h2 mat-dialog-title>{{ isUpdateMode ? "Update" : "Add" }} Entreprise form</h2>
+
+<form [formGroup]="entrepriseForm" (ngSubmit)="onSubmit(entrepriseForm.value)">
+
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+      <mat-label>companyName</mat-label>
+      <input matInput formControlName="companyName" />
+    </mat-form-field>
+    <br />
+    
+    <mat-form-field appearance="fill">
+      <mat-label>companySiret</mat-label>
+      <input matInput formControlName="companySiret" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+    <br />
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>date de Creation</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateOfCreation" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="fill">
+      <mat-label>Salarie</mat-label>
+      <input matInput formControlName="salarie" />
+    </mat-form-field>
+    <br />
+
+    
