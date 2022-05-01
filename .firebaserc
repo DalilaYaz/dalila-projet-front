@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "dalila-yazit-projet": {
+      "hosting": {
+        "dalila-projet-front": [
+          "dalila-yazit-projet"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "dalila-yazit-projet"
+  }
+}

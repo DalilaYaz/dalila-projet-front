@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "dalila-projet-front:build:production",
+            "firebaseProject": "dalila-yazit-projet",
+            "firebaseHostingSite": "dalila-yazit-projet"
+          }
         }
       }
     }
